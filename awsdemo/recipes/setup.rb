@@ -13,6 +13,7 @@ download_url = "http://download.oracle.com/otn-pub/java/jdk/#{jdk_version}-b#{bu
 
 
 unless file_cache_path
+  Chef::Log.info("file_cacche_path is undefined")
   file_cache_path = ::File.join(Chef::Config[:file_cache_path], jdk)
 
   chef_gem 'allow for https to http redirections' do
