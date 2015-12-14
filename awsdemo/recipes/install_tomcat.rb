@@ -1,5 +1,5 @@
 
-package "apache2" do
+package "httpd" do
   action :install
 end
 
