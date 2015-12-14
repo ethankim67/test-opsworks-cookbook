@@ -1,4 +1,3 @@
-
 java_home = node['java']['java_home']
 jdk_url = node['java']['jdk_url']
 
@@ -7,13 +6,6 @@ ruby_block "set-env-java-home" do
     ENV["JAVA_HOME"] = java_home
   end
   not_if { ENV["JAVA_HOME"] == java_home }
-end
-
-file "/etc/profile.d/jdk.sh" do
-  content <<-EOS
-export JAVA_HOME=#{node['java']['java_home']}
-EOS
-  mode 0755
 end
 
 remote_file '/tmp/jdk.rpm' do
