@@ -20,7 +20,7 @@ unless file_cache_path
   chef_gem 'allow for https to http redirections' do
     package_name 'open_uri_redirections'
     version '0.2.1'
-    complete_time false if Chef::Resource::ChefGem.method_defined?(:compile_time)
+    compile_time false if Chef::Resource::ChefGem.method_defined?(:compile_time)
   end
 
   Chef::Log.info("download #{download_url}")
