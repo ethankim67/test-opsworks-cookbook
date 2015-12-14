@@ -29,13 +29,20 @@ EOS
   mode 0755
 end
 
-remote_file '/tmp/jdk.tar.gz' do
+remote_file '/tmp/jdk.rpm' do
   source jdk_url
   owner 'root'
   group 'root'
   mode '0755'
   action :create
 end
+
+rpm_package 'jdk' do
+  source '/tmp/jdk.rpm'
+  action :install
+end
+
+  
 
 
 #java_ark "jdk" do
