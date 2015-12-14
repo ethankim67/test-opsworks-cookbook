@@ -1,4 +1,6 @@
 
-package "tomcat7*" do
-  action :install
+for p in ["tomcat7"] do
+  package p do
+    action :install
+  end
 end

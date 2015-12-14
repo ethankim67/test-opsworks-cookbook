@@ -8,7 +8,7 @@ ruby_block "set-env-java-home" do
   not_if { ENV["JAVA_HOME"] == java_home }
 end
 
-remote_file '/tmp/jdk.rpm' do
+remote_file "#{Chef::Config[:file_cache_path]}/jdk.rpm" do
   source jdk_url
   owner 'root'
   group 'root'
@@ -16,8 +16,8 @@ remote_file '/tmp/jdk.rpm' do
   action :create
 end
 
-rpm_package 'jdk' do
-  source '/tmp/jdk.rpm'
+rpm_package 'JDK' do
+  source "#{Chef::Config[:file_cache_path]}/jdk.rpm"
   action :install
 end
-  
+
