@@ -9,7 +9,7 @@ checksum = '7e95ad5fa1c75bc65d54aaac9e9986063d0a442f39a53f77909b044cef63dc0a'
 
 jdk = "jdk-#{jdk_version}-linux-#{arch}.tar.gz"
 
-download_url = "http://download.oracle.com/otn-pub/java/jdk/#{jdk_version}-b#{node['java_se']['build']}/#{jdk}"
+download_url = "http://download.oracle.com/otn-pub/java/jdk/#{jdk_version}-b#{build}/#{jdk}"
 
 
 unless file_cache_path
