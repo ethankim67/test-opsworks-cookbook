@@ -6,6 +6,7 @@ build = 17
 arch = 'x64'
 jdk_version = '1.8.0_66'
 checksum = '7e95ad5fa1c75bc65d54aaac9e9986063d0a442f39a53f77909b044cef63dc0a'
+file_cache_path = nil
 
 jdk = "jdk-#{jdk_version}-linux-#{arch}.tar.gz"
 
