@@ -1,5 +1,7 @@
 name 'awsdemo'
-version '1.0.0'
+maintainer 'piljoong'
+maintainer_email 'piljoong@amazon.com'
+version '0.0.1'
 
 recipe 'awsdemo::setup', 'Setup Java'
 recipe 'awsdemo::install_tomcat', 'Install Tomcat'

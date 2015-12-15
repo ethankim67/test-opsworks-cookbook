@@ -1,3 +1,4 @@
+
 java_home = node['java']['java_home']
 jdk_url = node['java']['jdk_url']
 
