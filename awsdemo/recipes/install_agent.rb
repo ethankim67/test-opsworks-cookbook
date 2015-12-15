@@ -16,8 +16,8 @@ service "codedeploy-agent" do
 end
 
 
-#template "#{Chef::Config[:file_cache_path]}/cwlogs.cfg" do
-template "/tmp/cwlogs.cfg" do
+template "#{Chef::Config[:file_cache_path]}/cwlogs.cfg" do
+#template "/tmp/cwlogs.cfg" do
   source "cwlogs.cfg.erb"
   owner "root"
   group "root"
