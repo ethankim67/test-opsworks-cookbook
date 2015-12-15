@@ -1,4 +1,4 @@
-# [general]
+[general]
 # Path to the AWSLogs agent's state file. Agent uses this file to mseattleaintain
 # client side state across its executions.
 state_file = /var/awslogs/state/agent-state
@@ -25,7 +25,7 @@ state_file = /var/awslogs/state/agent-state
 #datetime_format = %b %d %H:%M:%S
 #
 
-[<%= node[:opsworks][:stack][:name] %>-http-access-log]
+[awsdemo-http-access-log]
 datetime_format = [%Y-%m-%d %H:%M:%S]
 log_group_name = <%= node[:opsworks][:stack][:name].gsub(' ', '_') %>-http-access-log
 file = /var/log/tomcat7/localhost_access*
